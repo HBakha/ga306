@@ -1,0 +1,16 @@
+import maya.cmds
+
+# Creating a new layer, making it the current layer and naming it NewLayer
+
+new_layer = maya.cmds.createDisplayLayer(makeCurrent=True, name="NewLayer")
+
+num = 1
+
+# Changing the color of the current layer
+
+maya.cmds.setAttr (new_layer + '.color', num)
+
+#num = num +1
+num += 1
+
+maya.cmds.setAttr (new_layer + '.color', num)
